@@ -1,0 +1,96 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block title %} Movies {% endblock %}
+{% block content %}
+      <!-- movies section -->
+      <section class="text-gray-400 bg-gray-900 body-font">
+        <h1 class="text-center">Movies To Watch</h1>
+        <div class="container px-5 py-20 mx-auto">
+          <div class="flex flex-wrap -m-4">
+            {% for item in context|slice:"12" %}
+              <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                <a class="block relative h-68 rounded overflow-hidden">
+                  <img class="h-50 rounded w-full object-cover object-center mb-6" src="{{item.0}}" alt="content">
+                </a>
+                <div class="mt-4">
+                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Movie Name</h3>
+                  <h2 class="text-white title-font text-lg font-medium">{{item.1}}</h2>
+                  <p class="mt-1"></p>
+                </div>
+              </div>
+            {% endfor %}
+
+            <!-- <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-68 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{% static 'img/avatar.jpeg' %}">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Movie Name</h3>
+                <h2 class="text-white title-font text-lg font-medium">Avatar(2009)</h2>
+                <p class="mt-1"></p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-68 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{% static 'img/godfather.jpeg' %}">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Movie Name</h3>
+                <h2 class="text-white title-font text-lg font-medium">The Godfather(1972)</h2>
+                <p class="mt-1"></p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-68 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{% static 'img/inception.jpeg' %}">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Movie Name</h3>
+                <h2 class="text-white title-font text-lg font-medium">Inception(2010)</h2>
+                <p class="mt-1"></p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-68 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{% static 'img/Pirates.jpeg' %}">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Movie Name</h3>
+                <h2 class="text-white title-font text-lg font-medium">Pirates of the Caribbean(:On Strangers Tides(2011)</h2>
+                <p class="mt-1"></p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-68 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{% static 'img/lorofrings.jpeg' %}">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Movie Name</h3>
+                <h2 class="text-white title-font text-lg font-medium">The Lord of the Rings: The Return of the King(2003)</h2>
+                <p class="mt-1"></p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-68 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{% static 'img/tangled.jpeg' %}">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Movie Name</h3>
+                <h2 class="text-white title-font text-lg font-medium">Tangled(2010)</h2>
+                <p class="mt-1"></p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-68 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{% static 'img/onceupon.jpeg' %}">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Movie Name</h3>
+                <h2 class="text-white title-font text-lg font-medium">Once Upon a Time in America(1984)</h2>
+                <p class="mt-1"></p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+{% endblock %}
